@@ -55,6 +55,7 @@ NOTA: Si necesita calcular el número de días que van de una fecha ``fecha1`` a
     ```python
     def lee_reservas(ruta_fichero: str) -> list[Reserva]
     ```
+Resultado esperado:
 
     ```
     Test lee_reservas
@@ -73,6 +74,7 @@ NOTA: Si necesita calcular el número de días que van de una fecha ``fecha1`` a
                     fecha_fin: date|None = None
                     ) -> float
     ```
+Resultado esperado:
 
     ```
     Test total_facturado
@@ -87,6 +89,7 @@ NOTA: Si necesita calcular el número de días que van de una fecha ``fecha1`` a
     ```python
     def reservas_mas_largas(reservas: list[Reserva], n: int = 3) -> list[tuple[str, date]]
     ```
+Resultado esperado:
 
     ```
     Test reservas_mas_largas
@@ -100,6 +103,7 @@ NOTA: Si necesita calcular el número de días que van de una fecha ``fecha1`` a
                               servicios: set[str] |None = None
                               ) -> tuple[str, float]
     ```
+Resultado esperado:
 
     ```
     Test cliente_mayor_facturacion
@@ -115,6 +119,8 @@ NOTA: Si necesita calcular el número de días que van de una fecha ``fecha1`` a
                                tipos_habitacion: set[str] |None = None
                                ) -> dict[str, str]
     ```
+    
+Resultado esperado:
 
     ```
     Test servicios_estrella_por_mes
@@ -152,6 +158,8 @@ NOTA: Si necesita calcular el número de días que van de una fecha ``fecha1`` a
     ```python
    def media_dias_entre_reservas(reservas: list[Reserva])->float
     ```
+    
+Resultado esperado:
 
     ```
     Test media_dias_entre_reservas
@@ -163,10 +171,12 @@ NOTA: Si necesita calcular el número de días que van de una fecha ``fecha1`` a
     ```python
     def cliente_reservas_mas_seguidas(reservas: list[Reserva], min_reservas: int) -> str
     ```
+Resultado esperado:
 
     ```
     Test cliente_reservas_mas_seguidas
     El DNI del cliente con al menos 5 reservas y menor media de días entre reservas consecutivas es 88681493W, con una media de días entre reservas de 9.75.
     ```
+
 
 
