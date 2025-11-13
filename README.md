@@ -1,12 +1,12 @@
-## Fundamentos de Programación
-# Reservas de hotel
+# Fundamentos de Programación
+## Reservas de hotel
 
 **Autor:** Fermín Cruz  
 **Revisores:** Alfonso Bengoa, Mariano González, Toñi Reina  
 
 ---
 
-## Estructura de las carpetas del proyecto
+### Estructura de las carpetas del proyecto
 
 - **/src**: Contiene los diferentes módulos de Python que conforman el proyecto.  
   - **reservas.py**: Contiene funciones para explotar los datos de reservas.  
@@ -17,7 +17,7 @@
   - **reservas.csv**: Archivo con las reservas de un hotel.
 
 ---
-## Ejercicios a realizar
+### Ejercicios a realizar
 
 Se quieren analizar los datos de las reservas de un hotel. Para ello se dispone de un archivo en formato CSV codificado en UTF-8.  
 En cada línea del archivo se recoge la siguiente información: el nombre y DNI del cliente, las fechas de entrada y salida, el tipo de habitación, el número de personas, el precio por noche y los servicios adicionales contratados.
@@ -36,7 +36,7 @@ María Fernández,25061289Y,2022-01-01,2022-01-03,Familiar,4,83.77,
 
 ---
 
-## Definición obligatoria de `NamedTuple`
+### Definición obligatoria de `NamedTuple`
 
 ```python
 from typing import NamedTuple
@@ -61,9 +61,9 @@ Reserva = NamedTuple("Reserva",
 
 ---
 
-## Funciones a implementar
+### Funciones a implementar
 
-### 1. `lee_reservas`
+#### 1. `lee_reservas`
 
 Recibe la ruta de un fichero CSV y devuelve una lista de tuplas `Reserva` con todos los datos.
 
@@ -83,7 +83,7 @@ Las tres primeras:
 
 ---
 
-### 2. `total_facturado`
+#### 2. `total_facturado`
 
 Calcula el total facturado en todas las reservas cuya fecha de entrada esté entre dos fechas dadas.
 
@@ -104,7 +104,7 @@ Hasta 28 de febrero de 2022 (fecha inicio None): 41841.88
 
 ---
 
-### 3. `reservas_mas_largas`
+#### 3. `reservas_mas_largas`
 
 Devuelve las *n* tuplas `(nombre, fecha_entrada)` correspondientes a las reservas con mayor duración.
 
@@ -120,7 +120,7 @@ Con n = 3: [('Laura López', datetime.date(2022, 1, 2)), ('Sofía García', date
 
 ---
 
-### 4. `cliente_mayor_facturacion`
+#### 4. `cliente_mayor_facturacion`
 
 Devuelve el cliente (DNI) con mayor facturación, considerando solo reservas con ciertos servicios adicionales.
 
@@ -139,7 +139,7 @@ Con Parking o Spa: ('38747931S', 3216.0699999999997)
 
 ---
 
-### 5. `servicios_estrella_por_mes`
+#### 5. `servicios_estrella_por_mes`
 
 Indica, para cada mes, el servicio adicional más solicitado entre los tipos de habitación indicados.
 
@@ -184,7 +184,7 @@ Habitación familiar o deluxe:
 
 ---
 
-### 6. `media_dias_entre_reservas`
+#### 6. `media_dias_entre_reservas`
 
 Calcula la media de días entre cada dos reservas consecutivas en el tiempo.
 
@@ -200,7 +200,7 @@ Test media_dias_entre_reservas
 
 ---
 
-### 7. `cliente_reservas_mas_seguidas`
+#### 7. `cliente_reservas_mas_seguidas`
 
 Devuelve el DNI y la media de días entre reservas consecutivas del cliente con al menos `min_reservas` y menor media de días entre reservas.
 
@@ -213,3 +213,4 @@ def cliente_reservas_mas_seguidas(reservas: list[Reserva], min_reservas: int) ->
 Test cliente_reservas_mas_seguidas
 El DNI del cliente con al menos 5 reservas y menor media de días entre reservas consecutivas es 88681493W, con una media de días entre reservas de 9.75.
 ```
+
